@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import { setSpecialText } from "../actions";
-import { specialTextBox } from "../components/SpecialTextBox";
 
 const mapDispatchToProps = dispatch => {
   return {
