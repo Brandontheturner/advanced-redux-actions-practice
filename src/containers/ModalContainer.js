@@ -1,13 +1,13 @@
 import { connect } from "react-redux";
-import { addUser, removeUser } from "../actions";
+import Modal from "../components/Modal";
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
   return {
-    set: txt => dispatch(setSpecialText(txt))
+    isLoading: state.isLoading
   };
 };
 
 export default connect(
-  null,
-  mapDispatchToProps
-)(SpecialTextBox);
+  mapStateToProps,
+  null
+)(Modal);

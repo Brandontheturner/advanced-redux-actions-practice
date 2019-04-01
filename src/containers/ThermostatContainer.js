@@ -1,13 +1,13 @@
 import { connect } from "react-redux";
-import { addUser, removeUser } from "../actions";
+import Thermostat from "../components/Thermostat";
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
   return {
-    set: txt => dispatch(setSpecialText(txt))
+    temp: state.currentTemp
   };
 };
 
 export default connect(
-  null,
-  mapDispatchToProps
-)(SpecialTextBox);
+  mapStateToProps,
+  null
+)(Thermostat);

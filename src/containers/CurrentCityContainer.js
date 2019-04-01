@@ -1,13 +1,13 @@
 import { connect } from "react-redux";
-import { addUser, removeUser } from "../actions";
+import CurrentCity from "../components/CurrentCity";
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = dispatch => {
   return {
-    set: txt => dispatch(setSpecialText(txt))
+    text: state.CurrentCity
   };
 };
 
 export default connect(
-  null,
-  mapDispatchToProps
-)(SpecialTextBox);
+  mapStateToProps,
+  null
+)(CurrentCity);
