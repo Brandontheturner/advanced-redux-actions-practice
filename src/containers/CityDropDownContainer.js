@@ -1,13 +1,14 @@
 import { connect } from "react-redux";
-import { addUser, removeUser } from "../actions";
+import { setCurrentCity } from "../actions";
+import CityDropDown from "../components/CityDropDown";
 
 const mapDispatchToProps = dispatch => {
   return {
-    set: txt => dispatch(setSpecialText(txt))
+    set: city => dispatch(setCurrentCity(city))
   };
 };
 
 export default connect(
   null,
   mapDispatchToProps
-)(SpecialTextBox);
+)(CityDropDown);

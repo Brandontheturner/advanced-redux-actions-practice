@@ -1,4 +1,3 @@
-import { SSL_OP_CIPHER_SERVER_PREFERENCE } from "constants";
 import { combineReducers } from "redux";
 
 function currentCount(state = 0, action) {
@@ -77,8 +76,15 @@ function videoScale(state = "", action) {
   return state;
 }
 
-function combineReducers({
-
-})
-
-export default rootReducer;
+export default combineReducers({
+  currentCount,
+  specialText,
+  currentCity,
+  users,
+  currentTemp,
+  isLoading,
+  videoURL,
+  searchText,
+  currentUserSort,
+  videoScale
+});

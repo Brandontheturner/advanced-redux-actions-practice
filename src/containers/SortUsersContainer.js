@@ -1,13 +1,14 @@
 import { connect } from "react-redux";
-import { addUser, removeUser } from "../actions";
+import { setCurrentUserSort } from "../actions";
+import SortUsers from "../components/SortUsers";
 
 const mapDispatchToProps = dispatch => {
   return {
-    set: txt => dispatch(setSpecialText(txt))
+    set: sort => dispatch(setCurrentUserSort(sort))
   };
 };
 
 export default connect(
   null,
   mapDispatchToProps
-)(SpecialTextBox);
+)(SortUsers);

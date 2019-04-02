@@ -1,13 +1,14 @@
 import { connect } from "react-redux";
-import { addUser, removeUser } from "../actions";
+import { setVideoURL } from "../actions";
+import VideoTextBox from "../components/VideoTextBox";
 
 const mapDispatchToProps = dispatch => {
   return {
-    set: txt => dispatch(setSpecialText(txt))
+    set: URL => dispatch(setVideoURL(URL))
   };
 };
 
 export default connect(
   null,
   mapDispatchToProps
-)(SpecialTextBox);
+)(VideoTextBox);

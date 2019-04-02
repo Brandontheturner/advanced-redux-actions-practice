@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import CurrentCity from "../components/CurrentCity";
 
-const mapStateToProps = dispatch => {
+const mapStateToProps = state => {
   return {
     text: state.CurrentCity
   };

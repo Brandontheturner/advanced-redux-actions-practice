@@ -4,7 +4,7 @@ import ChangeTemperature from "../components/ChangeTemperature";
 
 const mapDispatchToProps = dispatch => {
   return {
-    set: num => dispatch(ChangeTemperature(num))
+    set: temp => dispatch(setTemp(temp))
   };
 };
 

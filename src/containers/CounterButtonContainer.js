@@ -1,13 +1,15 @@
 import { connect } from "react-redux";
-import { addUser, removeUser } from "../actions";
+import { increaseCounter, decreaseCounter } from "../actions";
+import CounterButton from "../components/CounterButton";
 
 const mapDispatchToProps = dispatch => {
   return {
-    set: txt => dispatch(setSpecialText(txt))
+    increase: () => dispatch(increaseCounter()),
+    decrease: () => dispatch(decreaseCounter())
   };
 };
 
 export default connect(
   null,
   mapDispatchToProps
-)(SpecialTextBox);
+)(CounterButton);
